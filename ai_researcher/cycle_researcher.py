@@ -14,7 +14,8 @@ class CycleResearcher:
                  device="cuda",
                  tensor_parallel_size=1,
                  gpu_memory_utilization=0.95,
-                 max_model_len=60000):
+                 max_model_len=60000,
+                 **kwargs):
         """
         Initialize the CycleResearcher.
 
@@ -24,6 +25,7 @@ class CycleResearcher:
             device (str): Device to run the model on. Default is "cuda"
             tensor_parallel_size (int): Number of GPUs to use for tensor parallelism
             gpu_memory_utilization (float): Fraction of GPU memory to use
+            **kwargs: Additional arguments passed to vLLM
         """
         model_mapping = {
             "12B": "WestlakeNLP/CycleResearcher-ML-12B",
@@ -47,7 +49,8 @@ class CycleResearcher:
             model=model_name,
             tensor_parallel_size=tensor_parallel_size,
             max_model_len=max_model_len,
-            gpu_memory_utilization=gpu_memory_utilization
+            gpu_memory_utilization=gpu_memory_utilization,
+            **kwargs
         )
 
         # Store model configuration for reference
