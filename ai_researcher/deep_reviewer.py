@@ -115,7 +115,8 @@ class DeepReviewer:
                  custom_model_name=None,
                  device="cuda",
                  tensor_parallel_size=1,
-                 gpu_memory_utilization=0.95):
+                 gpu_memory_utilization=0.95,
+                 max_model_len=32768):
         """
         Initialize the DeepReviewer.
 
@@ -125,6 +126,7 @@ class DeepReviewer:
             device (str): Device to run the model on. Default is "cuda"
             tensor_parallel_size (int): Number of GPUs to use for tensor parallelism
             gpu_memory_utilization (float): Fraction of GPU memory to use
+            max_model_len (int): Maximum sequence length the model can handle. Default is 32768
         """
         model_mapping = {
             "14B": "WestlakeNLP/DeepReviewer-14B",
@@ -146,7 +148,7 @@ class DeepReviewer:
         self.model = LLM(
             model=model_name,
             tensor_parallel_size=tensor_parallel_size,
-            max_model_len=90000,
+            max_model_len=max_model_len,
             gpu_memory_utilization=gpu_memory_utilization
         )
 

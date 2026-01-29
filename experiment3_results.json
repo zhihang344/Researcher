@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-01-28T17:40:37.029910",
+  "test_paper": "Improving AI Scientists through Multi-Agent Competitive Preference Optimization\n\n",
+  "fast_mode": {
+    "avg_rating": 0.0,
+    "num_reviewers": 1,
+    "avg_soundness": 2.0,
+    "avg_presentation": 2.0,
+    "avg_contribution": 2.0,
+    "total_weaknesses": 0,
+    "total_strengths": 0,
+    "total_suggestions": 0,
+    "total_questions": 0,
+    "review_length": 269912,
+    "review_time": 502.73556876182556
+  },
+  "standard_mode": {
+    "avg_rating": 4.666666666666667,
+    "num_reviewers": 3,
+    "avg_soundness": 2.6666666666666665,
+    "avg_presentation": 2.6666666666666665,
+    "avg_contribution": 2.3333333333333335,
+    "total_weaknesses": 0,
+    "total_strengths": 5,
+    "total_suggestions": 0,
+    "total_questions": 9,
+    "review_length": 38826,
+    "review_time": 75.82498979568481
+  },
+  "comparison": {
+    "time_speedup": 0.15082479638835228,
+    "detail_ratio": 0.14384688342867305,
+    "rating_diff": 4.666666666666667,
+    "feedback_ratio": 0,
+    "fast_efficiency": 0.0,
+    "standard_efficiency": 0.06154523303255685
+  }
+}

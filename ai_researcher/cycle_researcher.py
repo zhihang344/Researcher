@@ -42,7 +42,7 @@ class CycleResearcher:
             model_name = model_mapping[model_size]
 
         # Load tokenizer
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name, fix_mistral_regex=True)
 
         # Load model using vLLM
         self.model = LLM(
